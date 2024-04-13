@@ -725,17 +725,26 @@ footer{
 }
 
 
-/* Carousel Styles */
 .carousel {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
 .carousel .carousel-item {
-    background-color: #f8f9fa; /* Change this to your preferred background color */
+    background-color: #f8f9fa; /* Preferred background color */
     text-align: center;
     height: auto;
-    padding: 190px;
+    padding: 10px;
 }
 
 .zoom-effect {
@@ -759,49 +768,49 @@ footer{
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-image: none; /* Remove default images */
-    width: 50px; /* Set a specific width */
-    height: 50px; /* Set a specific height */
-    border-radius: 50%; /* Circular shape */
-    border: 2px solid black; 
-    position: relative;
+    background-image: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Adding custom arrow shapes using pseudo-elements */
 .carousel-control-prev-icon::after,
 .carousel-control-next-icon::after {
-    content: ''; /* Required for pseudo-elements */
+    content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
     border-top: 3px solid black; 
-    border-right: 3px solid black; /* Right part of the arrow */
+    border-right: 3px solid black;
     position: absolute;
 }
 
 .carousel-control-prev-icon::after {
-    transform: rotate(-135deg); /* Rotate to look like left arrow */
+    transform: rotate(-135deg);
 }
 
 .carousel-control-next-icon::after {
-    transform: rotate(45deg); /* Rotate to look like right arrow */
+    transform: rotate(45deg);
 }
 
-/* Hover effects to maintain usability */
-
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* subtle hover effect */
+}
 
 .carousel .carousel-item img {
-     width: 50%; /* This will make the image width equal to the width of its container */
-    height: 50px; /* Adjust this value as needed */
-    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
-    vertical-align: middle; /* This will make the image fit within its container while maintaining its aspect ratio *
+    width: 100%; /* Adjusted for better scaling */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .carousel .carousel-item h4, .carousel .carousel-item h5 {
-    color: #343a40; /* Change this to your preferred text color */
+    color: #343a40; /* Text color */
 }
 
 /* Responsive Styles */

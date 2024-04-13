@@ -184,8 +184,9 @@ const Articles = () => {
                     <h1>Great Selection</h1>
                     <p>Follow the most popular trends and get the best out of the spring collection</p>
                 </div>
-                <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+                <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
                     {carouselItems}
+                 
                 </Carousel>
             </section>
         </>
