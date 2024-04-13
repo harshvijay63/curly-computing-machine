@@ -735,7 +735,16 @@ footer{
     background-color: #f8f9fa; /* Change this to your preferred background color */
     text-align: center;
     height: auto;
-    padding: 20px;
+    padding: 190px;
+}
+
+.zoom-effect {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1);
 }
 
 .carousel .carousel-item .d-flex {
@@ -754,7 +763,7 @@ footer{
     width: 50px; /* Set a specific width */
     height: 50px; /* Set a specific height */
     border-radius: 50%; /* Circular shape */
-    border: 2px solid black; /* Black border */
+    border: 2px solid black; 
     position: relative;
     display: flex;
     align-items: center;
@@ -768,7 +777,7 @@ footer{
     display: inline-block;
     width: 20px;
     height: 20px;
-    border-top: 3px solid black; /* Top part of the arrow */
+    border-top: 3px solid black; 
     border-right: 3px solid black; /* Right part of the arrow */
     position: absolute;
 }
@@ -782,10 +791,7 @@ footer{
 }
 
 /* Hover effects to maintain usability */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Slight background on hover for better visibility */
-}
+
 
 .carousel .carousel-item img {
      width: 50%; /* This will make the image width equal to the width of its container */

@@ -97,9 +97,8 @@ const Articles = () => {
             <Carousel.Item key={i}>
                 <div className="d-flex justify-content-around">
                     {items.map(product => (
-                        
                         <div key={product.id} className="text-center" style={{ flex: "1 0 33%" }}>
-                            <img src={product.image} alt={product.name} style={{ width: "100%", height: "auto" }} />
+                            <img src={product.image} alt={product.name} className="zoom-effect" style={{ width: "90%", height: "auto" }} />
                             <div className="hp-s35">
                                 <h5>{product.name}</h5>
                                 {product.price ? (
