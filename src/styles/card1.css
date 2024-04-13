@@ -1,0 +1,62 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjusts the card spacing */
+    gap: 20px; /* Reduced gap for a compact layout */
+    padding: 20px;
+  }
+  
+  .card {
+    flex: 1 0 calc(50% - 40px); /* Adjusts the initial width for 2 cards per line */
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Reduces max-width for smaller cards */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Ensure there's space at the bottom */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: fit-content; /* Fixed height to maintain aspect ratio */
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px; /* Reduced padding for a more compact look */
+    text-align: center;
+  }
+  
+  .card-title {
+    color: #333;
+    margin-bottom: 10px; /* Reduced space between title and description */
+    font-size: 1rem; /* Smaller font size for compact design */
+  }
+  
+  .card-description {
+    color: #666;
+    font-size: 0.85rem; /* Smaller font size for description */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 1 calc(50% - 40px); /* Display 2 cards per line on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 0 1 calc(100% - 40px); /* Display 1 card per line on very small screens */
+    }
+  }
+  
