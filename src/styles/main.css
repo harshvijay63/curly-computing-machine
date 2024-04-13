@@ -548,7 +548,7 @@ footer{
     .hp-s34 img {
         max-width: 100%;
         height: auto;
-        max-height: 200px;
+        max-height:100px;
     }
     .hp-s111 h1 {
         font-size: 50px; 
@@ -774,11 +774,11 @@ footer{
 }
 
 .carousel-control-prev-icon::after {
-    transform: rotate(45deg); /* Rotate to look like left arrow */
+    transform: rotate(-135deg); /* Rotate to look like left arrow */
 }
 
 .carousel-control-next-icon::after {
-    transform: rotate(-135deg); /* Rotate to look like right arrow */
+    transform: rotate(45deg); /* Rotate to look like right arrow */
 }
 
 /* Hover effects to maintain usability */
@@ -788,8 +788,8 @@ footer{
 }
 
 .carousel .carousel-item img {
-     width: 100%; /* This will make the image width equal to the width of its container */
-    height: 300px; /* Adjust this value as needed */
+     width: 50%; /* This will make the image width equal to the width of its container */
+    height: 50px; /* Adjust this value as needed */
     object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     vertical-align: middle; /* This will make the image fit within its container while maintaining its aspect ratio *
 }

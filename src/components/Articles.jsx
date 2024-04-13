@@ -2,16 +2,7 @@ import React, { useState } from 'react';
 import { HashLink } from "react-router-hash-link";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import s31 from "../assets/s31.png";
-import s32 from "../assets/s32.png";
-import s33 from "../assets/s33.png";
-import s34 from "../assets/s34.png";
-import s35 from "../assets/s35.png";
-import s36 from "../assets/s36.png";
-import s37 from "../assets/s37.png";
-import s38 from "../assets/s38.png";
-import s39 from "../assets/s39.png";
-import s310 from "../assets/s310.png";
+
 import polo1 from "../assets/polo1.webp";
 import polo2 from "../assets/polo2.webp";
 import polo3 from "../assets/polo3.webp";
@@ -54,54 +45,45 @@ const Articles = () => {
     };
 
     const products = [
-        { id: 1, type: 'T-Shirt', image: s31, priceRange: '$69.00 - $99.00', name: 'Women-Tshirt Blue' },
-        { id: 2, type: 'Polos', image: s32, price: '$117.56', name: ' Red-Polo Tshirt' },
-        { id: 3, type: 'T-Shirt', image: s33, oldPrice: '$156.32', price: '$109.00', name: 'White T-Shirt' },
-        { id: 4, type: 'Cap', image: s34, priceRange: '$69.00 - $99.00', name: 'XY Black Cap' },
-        { id: 5, type: 'T-Shirt', image: s35, priceRange: '$69.00 - $99.00', name: 'Women-White T-Shirt' },
-        { id: 6, type: 'CorSet', image: s36, priceRange: '$69.00 - $99.00', name: 'CorSet' },
-        { id: 7, type: 'Jacket', image: s37, priceRange: '$69.00 - $99.00', name: 'Maroon Leather Jacket' },
-        { id: 8, type: 'T-Shirt', image: s38, priceRange: '$69.00 - $99.00', name: 'Bluez Tshirt ' },
-        { id: 9, type: 'Polos', image: s39, priceRange: '$69.00 - $99.00', name: 'Blackiiee Polo' },
-        { id: 10, type: 'T-Shirt', image: s310, priceRange: '$69.00 - $99.00', name: 'Women-White Full Sleeves Tshirt' },
+     
         
 
-        { id: 11, type: 'Polos', image: polo1, priceRange: '$69.00 - $99.00', name: ' Jack & Grey Polo' },
-        { id: 12, type: 'Polos', image: polo2, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Polo' },
-        { id: 13, type: 'Polos', image: polo3, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Green Polo' },
-        { id: 14, type: 'Polos', image: polo4, priceRange: '$69.00 - $99.00', name: 'Snitch Red Polo' },
-        { id: 15, type: 'Polos', image: polo5, priceRange: '$69.00 - $99.00', name: ' Gas Grey Polo' },
-        { id: 16, type: 'Polos', image: polo6, priceRange: '$69.00 - $99.00', name: ' J&C Green Polo' },
+        { id: 1, type: 'Polos', image: polo1, priceRange: '$69.00 - $99.00', name: ' Jack & Grey Polo' },
+        { id: 2, type: 'Polos', image: polo2, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Polo' },
+        { id: 3, type: 'Polos', image: polo3, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Green Polo' },
+        { id: 4, type: 'Polos', image: polo4, priceRange: '$69.00 - $99.00', name: 'Snitch Red Polo' },
+        { id: 5, type: 'Polos', image: polo5, priceRange: '$69.00 - $99.00', name: ' Gas Grey Polo' },
+        { id: 6, type: 'Polos', image: polo6, priceRange: '$69.00 - $99.00', name: ' J&C Green Polo' },
 
 
 
-        { id: 19, type: 'T-Shirt', image: shirtImage, priceRange: '$69.00 - $99.00', name: ' Gap Pinkiee T-Shirt' },
-        { id: 20, type: 'T-Shirt', image: tshirt3, priceRange: '$69.00 - $99.00', name: ' Armani White T-Shirt' },
-        { id: 21, type: 'T-Shirt', image: tshirt4, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Red T-Shirt' },
-        { id: 22, type: 'T-Shirt', image: tshirt5, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Dark Blue T-Shirt' },
-        { id: 23, type: 'T-Shirt', image: tshirt6, priceRange: '$69.00 - $99.00', name: 'Italy Whitezz T-Shirt' },
-        { id: 24, type: 'T-Shirt', image: tshirt7, priceRange: '$69.00 - $99.00', name: 'Black Armani Premium T-Shirt' },
-        { id: 25, type: 'T-Shirt', image: tshirt8, priceRange: '$69.00 - $99.00', name: ' Goodz T-Shirt' },
-        { id: 26, type: 'T-Shirt', image: tshirt9, priceRange: '$69.00 - $99.00', name: 'Wrongn T-Shirt' },
+        { id: 7, type: 'T-Shirt', image: shirtImage, priceRange: '$69.00 - $99.00', name: ' Gap Pinkiee T-Shirt' },
+        { id: 8, type: 'T-Shirt', image: tshirt3, priceRange: '$69.00 - $99.00', name: ' Armani White T-Shirt' },
+        { id: 9, type: 'T-Shirt', image: tshirt4, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Red T-Shirt' },
+        { id: 10, type: 'T-Shirt', image: tshirt5, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Dark Blue T-Shirt' },
+        { id: 11, type: 'T-Shirt', image: tshirt6, priceRange: '$69.00 - $99.00', name: 'Italy Whitezz T-Shirt' },
+        { id: 12, type: 'T-Shirt', image: tshirt7, priceRange: '$69.00 - $99.00', name: 'Black Armani Premium T-Shirt' },
+        { id: 13, type: 'T-Shirt', image: tshirt8, priceRange: '$69.00 - $99.00', name: ' Goodz T-Shirt' },
+        { id: 14, type: 'T-Shirt', image: tshirt9, priceRange: '$69.00 - $99.00', name: 'Wrongn T-Shirt' },
 
 
 
-        { id: 27, type: 'Shorts', image: shorts1, priceRange: '$69.00 - $99.00', name: 'Patagonia Baggies Short' },
-        { id: 28, type: 'Shorts', image: shorts2, priceRange: '$69.00 - $99.00', name: ' Amazon Essentials Short' },
-        { id: 29, type: 'Shorts', image: shorts3, priceRange: '$69.00 - $99.00', name: '  Nike Short' },
-        { id: 30, type: 'Shorts', image: shorts4, priceRange: '$69.00 - $99.00', name: '  Van Heusen Short' },
-        { id: 31, type: 'Shorts', image: shorts5, priceRange: '$69.00 - $99.00', name: ' Lacoste Short ' },
-        { id: 32, type: 'Shorts', image: shorts6, priceRange: '$69.00 - $99.00', name: '  United Colors of Benetton Short' },
+        { id: 15, type: 'Shorts', image: shorts1, priceRange: '$69.00 - $99.00', name: 'Patagonia Baggies Short' },
+        { id: 16, type: 'Shorts', image: shorts2, priceRange: '$69.00 - $99.00', name: ' Amazon Essentials Short' },
+        { id: 17, type: 'Shorts', image: shorts3, priceRange: '$69.00 - $99.00', name: '  Nike Short' },
+        { id: 18, type: 'Shorts', image: shorts4, priceRange: '$69.00 - $99.00', name: '  Van Heusen Short' },
+        { id: 19, type: 'Shorts', image: shorts5, priceRange: '$69.00 - $99.00', name: ' Lacoste Short ' },
+        { id: 20, type: 'Shorts', image: shorts6, priceRange: '$69.00 - $99.00', name: '  United Colors of Benetton Short' },
         
 
 
 
-        { id: 33, type: 'Lowers', image: Lowers1, priceRange: '$69.00 - $99.00', name: 'Allen Solly Lower ' },
-        { id: 34, type: 'Lowers', image: Lowers2, priceRange: '$69.00 - $99.00', name: 'GAP Lower' },
-        { id: 35, type: 'Lowers', image: Lowers3, priceRange: '$69.00 - $99.00', name: 'Roadster Lower ' },
-        { id: 36, type: 'Lowers', image: Lowers4, priceRange: '$69.00 - $99.00', name: 'U.S. Polo Assn jogger' },
-        { id: 37, type: 'Lowers', image: Lowers5, priceRange: '$69.00 - $99.00', name: 'Superdry Jogger' },
-        { id: 38, type: 'Lowers', image: Lowers6, priceRange: '$69.00 - $99.00', name: 'Levi TrackPant ' },
+        { id: 21, type: 'Lowers', image: Lowers1, priceRange: '$69.00 - $99.00', name: 'Allen Solly Lower ' },
+        { id: 22, type: 'Lowers', image: Lowers2, priceRange: '$69.00 - $99.00', name: 'GAP Lower' },
+        { id: 23, type: 'Lowers', image: Lowers3, priceRange: '$69.00 - $99.00', name: 'Roadster Lower ' },
+        { id: 24, type: 'Lowers', image: Lowers4, priceRange: '$69.00 - $99.00', name: 'U.S. Polo Assn jogger' },
+        { id: 25, type: 'Lowers', image: Lowers5, priceRange: '$69.00 - $99.00', name: 'Superdry Jogger' },
+        { id: 26, type: 'Lowers', image: Lowers6, priceRange: '$69.00 - $99.00', name: 'Levi TrackPant ' },
 
 
 
