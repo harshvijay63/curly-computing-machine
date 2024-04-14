@@ -89,31 +89,34 @@ const Articles = () => {
 
     ];
     const filteredProducts = sortType ? products.filter(product => product.type === sortType) : products;
-    const itemsPerSlide = 3; // Number of items you want per slide
-    const carouselItems = [];
-    for (let i = 0; i < filteredProducts.length; i += itemsPerSlide) {
-        const items = filteredProducts.slice(i, i + itemsPerSlide);
-        carouselItems.push(
-            <Carousel.Item key={i}>
-                <div className="d-flex justify-content-around">
-                    {items.map(product => (
-                        <div key={product.id} className="text-center" style={{ flex: "1 0 33%" }}>
-                            <img src={product.image} alt={product.name} className="zoom-effect" style={{ width: "90%", height: "auto" }} />
-                            <div className="hp-s35">
-                                <h5>{product.name}</h5>
-                                {product.price ? (
-                                    <h4>{product.price}</h4>
-                                ) : (
-                                    <h4>{product.oldPrice && <s>{product.oldPrice}</s>} {product.priceRange}</h4>
-                                )}
-                                {product.discount && <div className="hp-s341">{product.discount}</div>}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </Carousel.Item>
-        );
-    }
+    const itemsPerSlide = 4;
+const carouselItems = [];
+
+for (let i = 0; i < filteredProducts.length; i += itemsPerSlide) {
+  const items = filteredProducts.slice(i, i + itemsPerSlide);
+  carouselItems.push(
+    <Carousel.Item key={i}>
+      <div className="d-flex justify-content-around">
+        {items.map(product => (
+          <div key={product.id} className="text-center" style={{ flex: "1 0 25%" }}>
+            <img src={product.image} alt={product.name} className="zoom-effect" style={{ width: "90%", height: "auto" }} />
+            <div className="hp-s35">
+              <h5>{product.name}</h5>
+              {product.price ? (
+                <h4>{product.price}</h4>
+              ) : (
+                <h4>
+                  {product.oldPrice && <s>{product.oldPrice}</s>} {product.priceRange}
+                </h4>
+              )}
+              {product.discount && <div className="hp-s341">{product.discount}</div>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Carousel.Item>
+  );
+}
 
 
     const sortedProducts = sortType ? products.filter(product => product.type === sortType) : products;
@@ -126,28 +129,28 @@ const Articles = () => {
                         <HashLink to="#great-selection" className="link-overlay">
                             <span>Visit Great Selection</span>
                         </HashLink>
-                        <div className="hp-s24"><h6>Polos</h6></div>
+                        <div className="hp-s24"><h5>Polos</h5></div>
                     </div>
 
                     <div className="hp-s22" onClick={() => handleCategoryClick('T-Shirt')}>
                         <HashLink to="#great-selection" className="link-overlay">
                             <span>Visit Great Selection</span>
                         </HashLink>
-                        <div className="hp-s24"><h6>T-shirts</h6></div>
+                        <div className="hp-s24"><h5>T-shirts</h5></div>
                     </div>
 
                     <div className="hp-s23" onClick={() => handleCategoryClick('Shorts')}>
                         <HashLink to="#great-selection" className="link-overlay">
                             <span>Visit Great Selection</span>
                         </HashLink>
-                        <div className="hp-s24"><h6>Shorts</h6></div>
+                        <div className="hp-s24"><h5>Shorts</h5></div>
                     </div>
 
                     <div className="hp-s25" onClick={() => handleCategoryClick('Lowers')}>
                         <HashLink to="#great-selection" className="link-overlay">
                             <span>Visit Great Selection</span>
                         </HashLink>
-                        <div className="hp-s24"><h6>Lowers</h6></div>
+                        <div className="hp-s24"><h5>Lowers</h5></div>
                     </div>
                 </div>
             </section>
@@ -180,15 +183,14 @@ const Articles = () => {
 
 
             <section id="great-selection">
-                <div className="hp-s31">
-                    <h1>Great Selection</h1>
-                    <p>Follow the most popular trends and get the best out of the spring collection</p>
-                </div>
-                <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
-                    {carouselItems}
-                 
-                </Carousel>
-            </section>
+  <div className="hp-s31">
+    <h1>Great Selection</h1>
+    <p>Follow the most popular trends and get the best out of the spring collection</p>
+  </div>
+  <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
+    {carouselItems}
+  </Carousel>
+</section>
         </>
     );
 };
