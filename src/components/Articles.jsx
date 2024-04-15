@@ -33,12 +33,12 @@ import Lowers6 from "../assets/lower6.webp";
 
 
   const Articles = () => {
-    // Define getItemsPerSlide function here to ensure it is hoisted
+   
     const getItemsPerSlide = () => {
         if (window.innerWidth <= 768) {
-            return 1; // 1 item per slide on mobile screens
+            return 1; 
         } else {
-            return 4; // 4 items per slide on desktop screens
+            return 4; 
         }
     };
 
@@ -150,7 +150,7 @@ import Lowers6 from "../assets/lower6.webp";
 
 
     
-    const sortedProducts = sortType ? products.filter(product => product.type === sortType) : products;
+    // const  sortType ? products.filter(product => product.type === sortType) : products;
 
     return (
         <>
@@ -196,7 +196,7 @@ import Lowers6 from "../assets/lower6.webp";
                 </div>
 
                 <div className="carousel-container">
-                <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
+                <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000} controls={true} indicators={false}>
                     {carouselItems}
                 </Carousel>
                 </div>
