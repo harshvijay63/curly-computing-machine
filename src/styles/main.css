@@ -1,53 +1,49 @@
 html {
     scroll-behavior: smooth;
   }
-
-
-*{
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensures padding does not affect overall width */
     letter-spacing: 1.8px;
-}
-
-
-
-header{
+  }
+  
+  header {
     background-color: white;
-}
-
-.h-par{
+  }
+  
+  .h-par {
     display: flex;
     justify-content: space-between;
     padding: 30px 15px;
-}
-
-.h-c1 img{
+  }
+  
+  .h-c1 img {
     width: 75%;
-}
-
-.h-c2 a{
+  }
+  
+  .h-c2 a {
     text-decoration: none;
     color: black;
-}
-
-.h-c2{
+  }
+  
+  .h-c2 {
     display: flex;
     min-width: 300px;
     font-weight: 300;
     justify-content: space-between;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 27px;
-
-}
-
-.h-c3{
+  }
+  
+  .h-c3 {
     display: flex;
     min-width: 60px;
     justify-content: space-between;
-}
-
-.h-c31{
+  }
+  
+  .h-c31 {
     text-align: center;
     font-size: 7px;
     background-color: #ff0000a8;
@@ -59,20 +55,20 @@ header{
     position: relative;
     right: 5px;
     top: -3px;
-}
-
-.hp-s1{
+  }
+  
+  .hp-s1 {
     display: flex;
     height: 480px;
     margin: 10px 0;
-}
-
-.hp-s111 h2{
+  }
+  
+  .hp-s111 h2 {
     margin-left: 30px;
-    font-family: 'Jost', sans-serif;
-}
-
-.hp-s111{
+    font-family: "Jost", sans-serif;
+  }
+  
+  .hp-s111 {
     background-image: url("../assets/s11.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,30 +77,29 @@ header{
     margin: 10px 10px 10px 0;
     position: relative;
     right: -50px;
-    text-align: left;   
-
-}
-
-.hp-s111 h1{
+    text-align: left;
+  }
+  
+  .hp-s111 h1 {
     font-size: 65px;
     margin: -43px;
     margin-right: -67px;
-}
-
-.hp-s11 h6{
+  }
+  
+  .hp-s11 h6 {
     margin-right: 70px;
     margin-left: 30px;
     color: red;
-}
-
-.hp-s11 a{
+  }
+  
+  .hp-s11 a {
     background-color: red;
     color: white;
     padding: 15px;
-    text-decoration: none;  
-}
-
-.hp-s11{
+    text-decoration: none;
+  }
+  
+  .hp-s11 {
     width: 30%;
     background-color: white;
     height: 100%;
@@ -113,241 +108,229 @@ header{
     justify-content: center;
     align-items: flex-end;
     padding-right: 20px;
-}
-
-.hp-s12 img{
+  }
+  
+  .hp-s12 img {
     height: 105%;
-}
-
-.hp-s12{
+  }
+  
+  .hp-s12 {
     width: 70%;
     background-color: antiquewhite;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hp-s13{
+  }
+  
+  .hp-s13 {
     position: absolute;
     top: 35%;
     left: 20px;
-}
-.hp-s2{
+  }
+  .hp-s2 {
     display: flex;
     height: 400px;
     justify-content: space-between;
     padding: 40px 20px;
-}
-.hp-s21{
+    font-weight: bolder;
+  }
+  .hp-s21 {
     background-image: url("../assets/polo1.webp");
+    background-size: cover;
+    font-weight: bold;
+    width: 30%;
+    height: 451px;
+    position: relative; /* Essential for positioning the link absolutely inside this div */
+    cursor: pointer;
+  }
+  
+  .hp-s21 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Ensure it's above all other content in the div */
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    outline: none; /* Removes the outline to keep the style clean */
+    border: none; /* Removes any border */
+    text-decoration: none; /* Removes underline from link */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* This style is for the invisible text for accessibility */
+  .hp-s21 a span {
+    opacity: 0; /* Invisible but accessible to screen readers */
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .hp-s22 {
+    background-image: url("../assets/Tshirt1.webp");
     background-size: cover;
     width: 30%;
     height: 451px;
     position: relative; /* Essential for positioning the link absolutely inside this div */
-    cursor: pointer;  
-}
-
-.hp-s21 a {
+    cursor: pointer;
+  }
+  .hp-s22 a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10;  /* Ensure it's above all other content in the div */
+    z-index: 10; /* Ensure it's above all other content in the div */
     background: rgba(0, 0, 0, 0); /* Transparent background */
-    outline: none;  /* Removes the outline to keep the style clean */
-    border: none;  /* Removes any border */
-    text-decoration: none;  /* Removes underline from link */
+    outline: none; /* Removes the outline to keep the style clean */
+    border: none; /* Removes any border */
+    text-decoration: none; /* Removes underline from link */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* This style is for the invisible text for accessibility */
-.hp-s21 a span {
+  }
+  
+  /* This style is for the invisible text for accessibility */
+  .hp-s22 a span {
     opacity: 0; /* Invisible but accessible to screen readers */
     height: 0;
     width: 0;
     overflow: hidden;
-}
-
-
-.hp-s22{
-    background-image: url("../assets/Tshirt1.webp");
-    background-size: cover;
-    width: 30%;
-    height:  451px;
-    position: relative; /* Essential for positioning the link absolutely inside this div */
-    cursor: pointer; 
-}
-.hp-s22 a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;  /* Ensure it's above all other content in the div */
-    background: rgba(0, 0, 0, 0); /* Transparent background */
-    outline: none;  /* Removes the outline to keep the style clean */
-    border: none;  /* Removes any border */
-    text-decoration: none;  /* Removes underline from link */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* This style is for the invisible text for accessibility */
-.hp-s22 a span {
-    opacity: 0; /* Invisible but accessible to screen readers */
-    height: 0;
-    width: 0;
-    overflow: hidden;
-}
-
-.hp-s23{
+  }
+  
+  .hp-s23 {
     background-image: url("../assets/short2.webp");
     background-size: cover;
     width: 30%;
     height: 451px;
     position: relative; /* Essential for positioning the link absolutely inside this div */
-    cursor: pointer; 
-}
-.hp-s23 a {
+    cursor: pointer;
+  }
+  .hp-s23 a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10; 
+    z-index: 10;
     background: rgba(0, 0, 0, 0); /* Transparent background */
-    outline: none;  /* Removes the outline to keep the style clean */
-    border: none;  /* Removes any border */
-    text-decoration: none;  /* Removes underline from link */
+    outline: none; /* Removes the outline to keep the style clean */
+    border: none; /* Removes any border */
+    text-decoration: none; /* Removes underline from link */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* This style is for the invisible text for accessibility */
-.hp-s23 a span {
+  }
+  
+  /* This style is for the invisible text for accessibility */
+  .hp-s23 a span {
     opacity: 0; /* Invisible but accessible to screen readers */
     height: 0;
     width: 0;
     overflow: hidden;
-
-}
-
-
-
-
-.hp-s25{
+  }
+  
+  .hp-s25 {
     background-image: url("../assets/lower1.webp");
     background-size: cover;
     width: 30%;
     height: 451px;
     position: relative; /* Essential for positioning the link absolutely inside this div */
-    cursor: pointer; 
-}
-
-
-.hp-s25 a {
+    cursor: pointer;
+  }
+  
+  .hp-s25 a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10;  /* Ensure it's above all other content in the div */
+    z-index: 10; /* Ensure it's above all other content in the div */
     background: rgba(0, 0, 0, 0); /* Transparent background */
-    outline: none;  /* Removes the outline to keep the style clean */
-    border: none;  /* Removes any border */
-    text-decoration: none;  
+    outline: none; /* Removes the outline to keep the style clean */
+    border: none; /* Removes any border */
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-.hp-s25 a span {
-    opacity: 0; 
+  }
+  
+  .hp-s25 a span {
+    opacity: 0;
     height: 0;
     width: 0;
     overflow: hidden;
-
-}
-
-
-
-
-.hp-s24 h6{
+  }
+  
+  .hp-s24 h6 {
     font-size: 17px;
     margin-bottom: 8px;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 600;
-}
-.hp-s24 a{
+  }
+  .hp-s24 a {
     text-decoration: none;
     color: red;
     border-bottom: 2px solid red;
     font-size: smaller;
-
-}
-.hp-s24{
+  }
+  .hp-s24 {
     padding: 20px;
-}
-
-
-.hp-s31 p{
+  }
+  
+  .hp-s31 p {
     color: #636363;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 400;
-    font-family: 'Jost', sans-serif;
-}
-.hp-s31 h1{
+    font-family: "Jost", sans-serif;
+  }
+  .hp-s31 h1 {
     color: red;
     margin-bottom: 10px;
-    font-family: 'Jost', sans-serif;
-    
-}
-.hp-s31{
+    font-family: "Jost", sans-serif;
+  }
+  .hp-s31 {
+    padding: 111px 0px 0px 43px; /* Reduced padding */
     text-align: center;
-    margin: 160px 0 50px 0;
-    font-family:'Jost', sans-serif;
+    margin: 15px 0 0 0; /* Adjusted margins if necessary */
+    font-family: "Jost", sans-serif;
     font-weight: 500;
-    
-}
-.hp-s32{
-        display: flex;
-        padding: 66px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-}
-
-.d-block w-100{
-    color:black;
-}
-.hp-s33{
+  }
+  .hp-s32 {
+    display: flex;
+    padding: 66px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .d-block w-100 {
+    color: black;
+  }
+  .hp-s33 {
     width: 240px;
     margin-bottom: 50px;
     padding: 0 10px;
-}
-
-.hp-s34 {
+  }
+  
+  .hp-s34 {
     width: 100%; /* Adjust based on layout */
     height: 200px; /* Fixed height */
     overflow: hidden; /* Hides parts of the image that exceed the dimensions */
     display: block;
     justify-content: center;
     align-items: center;
-}
-
-.hp-s34 img {
+  }
+  
+  .hp-s34 img {
     height: auto;
     min-width: auto;
     object-fit: cover;
-}
-
-.hp-s341{
+  }
+  
+  .hp-s341 {
     background-color: red;
     color: white;
     padding: 2px 5px;
@@ -355,214 +338,215 @@ header{
     position: absolute;
     margin: 15px;
     font-size: 14px;
-}
-.hp-s35 h2{
+  }
+  .hp-s35 h2 {
     font-size: 18px;
     color: black;
-}
-.hp-s35 h4{
+  }
+  .hp-s35 h4 {
     margin: 10px 0;
     font-size: 11px;
-}
-.hp-s36{
-    display: flex
-}
-.hp-s36 h1{
+  }
+  .hp-s36 {
+    display: flex;
+  }
+  .hp-s36 h1 {
     font-size: 20px;
     color: red;
-}
-.hp-s36 h2{
+  }
+  .hp-s36 h2 {
     color: #6363639e;
     margin-right: 10px;
-}
-.hp-s37 a{ 
+  }
+  .hp-s37 a {
     background-color: red;
     color: white;
     padding: 10px 30px;
     text-decoration: none;
-}
-.hp-s37{
+  }
+  .hp-s37 {
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
-}
-
-
-.hp-s4 img{
+  }
+  
+  .hp-s4 img {
     width: 100%;
-}
-.hp-s4{
+  }
+  .hp-s4 {
     width: 100%;
-}
-
-
-.hp-s5{
+  }
+  
+  .hp-s5 {
     display: flex;
     margin: 80px 60px;
-}
-.hp-s51{
+  }
+  .hp-s51 {
     margin-top: -50px;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-.hp-s51 i{
+     
+  }
+  .hp-s51 i {
     background-color: #e2e2e291;
     padding: 10px;
     border-radius: 20px;
     width: fit-content;
     margin-bottom: 20px;
-}
-.hp-s51 a{
+  }
+  .hp-s51 a {
     font-weight: 800;
     color: black;
     text-decoration: none;
     font-size: 20px;
     margin-bottom: 10px;
-}
-.hp-s51 p{
+  }
+  .hp-s51 p {
     color: #6363639e;
     text-decoration: none;
     font-size: 12px;
-}
-.hp-s53{
+  }
+  .hp-s53 {
     display: flex;
-}
-.hp-s53 img{
+  }
+  .hp-s53 img {
     width: 45%;
     margin: 2px;
-}
-
-
-footer{
+  }
+  
+  footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-
-}
-.f1{
+  }
+  .f1 {
     margin-bottom: 100px;
-}
-.f2 hr{
+  }
+  .f2 hr {
     height: 2px;
     background-color: black;
-}
-.f2{
+  }
+  .f2 {
     display: flex;
     flex-direction: column;
     width: 70%;
-}
-.f21 a{
+  }
+  .f21 a {
     text-decoration: none;
     color: red;
     font-weight: 600;
-}
-.f21 input{
+  }
+  .f21 input {
     border: 0;
     background-color: white;
-}
-.f21{
+  }
+  .f21 {
     display: flex;
     justify-content: space-between;
     margin: 25px 10px;
-}
-.f22{
+  }
+  .f22 {
     display: flex;
     justify-content: center;
     margin: 60px 0;
-}
-.f22 i{
+  }
+  .f22 i {
     background-color: #e2e2e291;
     padding: 15px;
     border-radius: 50px;
     margin: 0 20px;
-}
-.f31{
+  }
+  .f31 {
     margin-left: 30px;
-}
-.f32{
+  }
+  .f32 {
     margin-right: 30px;
-}
-.f3{
+  }
+  .f3 {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
     background-color: #e2e5ff91;
-}
-
-.menu-icon {
-    display: block; 
+  }
+  
+  .hp-s51 i {
+      flex-shrink: 0; /* Prevents the icon from shrinking */
+      margin-right: 10px; /* Adds space between the icon and the text */
+  }
+  
+  .menu-icon {
+    display: block;
     cursor: pointer;
   }
-@media screen and (min-width: 769px) {
+  @media screen and (min-width: 769px) {
     .hp-s34 img {
-        max-width: 100%;
-        height: auto;
-        max-height: 200px;
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
     }
-    .html{
-        font-size: 45%;
+    .html {
+      font-size: 45%;
     }
-
+  
     .h-c2 a {
-        padding: 0 15px; 
-        font-size: 16px; 
+      padding: 0 15px;
+      font-size: 16px;
     }
-
+  
     .hp-s2 {
-        flex-direction: row; 
-        justify-content: space-between;
-        padding: 40px 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px 10px;
     }
-
-    .hp-s21, .hp-s22, .hp-s23, .hp-s25 {
-        width: 24%; 
+  
+    .hp-s21,
+    .hp-s22,
+    .hp-s23,
+    .hp-s25 {
+      width: 24%;
     }
-
-    .hp-s11{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
+  
     .hp-s11 {
-        width: 28%;
-        padding-right: 16px; 
+      display: flex;
+      justify-content: space-evenly;
     }
-
+  
+    .hp-s11 {
+      width: 28%;
+      padding-right: 16px;
+    }
+  
     .hp-s12 {
-        width: 68%; 
+      width: 68%;
     }
-
-   
-}
-@media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 768px) {
     .menu-icon {
       display: block;
       z-index: 10;
     }
-
-    .hp-s31{
-        text-align: center;
-        margin: 15px 0 50px 0;
-        font-family:'Jost', sans-serif;
-        font-weight: 500;
-        
+  
+    .hp-s31 {
+      text-align: center;
+      margin: 15px 0 50px 0;
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
     }
     .hp-s34 img {
-        max-width: 100%;
-        height: auto;
-        max-height:100px;
+      max-width: 100%;
+      height: auto;
+      max-height: 100px;
     }
     .hp-s111 h1 {
-        font-size: 50px; 
-        margin: -20px;
-        margin-right: -40px;
+      font-size: 50px;
+      margin: -20px;
+      margin-right: -40px;
     }
   
     .h-c2 {
@@ -574,95 +558,130 @@ footer{
       flex-direction: column;
       z-index: 9;
     }
-    .show{
-        display: flex !important;
+    .show {
+      display: flex !important;
     }
   
     .h-c2 a {
       padding: 10px;
       border-bottom: 1px solid #eee;
     }
-    .hp-s13{
-        display: none;
+    .hp-s13 {
+      display: none;
     }
-    .hp-s11{
-       
-        position: absolute;
-        background-color: transparent;
-       
-        top: 90px;
-        left: 50px;
+    .hp-s11 {
+      position: absolute;
+      background-color: transparent;
+  
+      top: 90px;
+      left: 50px;
     }
-    .hp-s12 img{
-        height: 50%;
+    .hp-s12 img {
+      height: 50%;
     }
-    .hp-s12{
-
-        width: 100%;
-        justify-content: flex-end;
+    .hp-s12 {
+      width: 100%;
+      justify-content: flex-end;
     }
-    
-    .hp-s2{
-        flex-wrap: wrap;
-        height: fit-content;
+  
+  
+    #articles, #great-selection {
+      position: relative; /* Keep sections in the natural flow */
+      width: 100%; /* Full width to prevent overflow */
+      z-index: auto; /* Reset z-index to natural stacking */
+      padding: 180px 10px;/* Add some padding for better spacing */
+  }
+  
+    .hp-s2 {
+      display: flex;
+      flex-wrap: wrap; /* Allows blocks to wrap to the next line */
+      justify-content: space-between; /* Spaces items evenly */
+      padding: 10px 5px; /* Adjusted padding for alignment */
+  }
+  .hp-s21,
+  .hp-s22,
+  .hp-s23,
+  .hp-s25 {
+      width: calc(50% - 10px);
+      margin-bottom: 17px;
+      margin-right: 2px;
+      margin-left: 2px;
+      height: 273px;
+  }
+    .hp-s32 {
+      justify-content: space-around;
     }
-    .hp-s21, .hp-s22, .hp-s23,  .hp-s25{
-        width: 104%;
-    margin-bottom: 27px;
-    height: 386px;
+    .hp-s5 {
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .hp-s32{
-        justify-content: space-around;
+    .hp-s53 {
+      justify-content: center;
     }
-    .hp-s5{
-        flex-wrap: wrap;
-        justify-content: center;
+    .hp-s51 {
+      margin-bottom: 30px;
+     
     }
-    .hp-s53{
-        
-        justify-content: center;
+  
+    .hp-s51 .icon-and-link {
+      display: flex;
+      align-items: center; /* Centers the icon and link vertically */
+  }
+  
+  .hp-s51 i {
+      margin-right: 8px;
+      margin-top: 13px; /* Adds space between the icon and the link */
+  }
+  
+   
+  
+    .f3 {
+      flex-direction: column;
+      height: 190px;
+      justify-content: space-between;
+      align-items: center;
     }
-    .hp-s51{
-        margin-bottom: 30px;
+  
+  
+  
+    .f3 p {
+      text-align: center;
     }
-
-    .f3{
-        flex-direction: column;
-        height: 190px;
+    .f21 {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
     }
-    .f21{
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 100px;
-    }
-    .hp-s11{
-        height: 470px;
-        justify-content: space-evenly;
+    .hp-s11 {
+      height: 470px;
+      justify-content: space-evenly;
     }
   }
   
- 
   @media screen and (max-width: 769px) {
     .menu-icon {
       display: block;
-
     }
     .hp-s34 img {
-        max-width: 100%;
-        height: auto;
-        max-height: 200px;
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
     }
-
-    .hp-s111 h1 {
-        font-size: 35px; 
-        margin: -10px;
-        margin-right: -20px;
-    }
-
+  
+  
+    carousel-container {
+      margin-top: 10px; /* Additional space above the carousel */
   }
-
-  .h3{
+  
+    .hp-s111 h1 {
+      font-size: 35px;
+      margin: -10px;
+      margin-right: -20px;
+    }
+  }
+  
+  .h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 700;
@@ -670,123 +689,126 @@ footer{
     color: var(--bs-heading-color);
     font-size: 0.75rem;
   }
-
   
-  @media (min-width:1090px) and (max-width:1349px) {
-	.hp-s32{
-		width: 1060px;
-	}
-	#great-selection{
-		    display: flex;
-    		    flex-direction: column;
-    		    align-items: center;
-	}
-}
-.hp-s34 img {
+  @media (min-width: 1090px) and (max-width: 1349px) {
+    .hp-s32 {
+      width: 1060px;
+    }
+    #great-selection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .hp-s34 img {
     max-width: 100%;
     height: auto;
     max-height: 200px;
-}
-
-@media all and (min-width: 1350px) {
-
-	#great-selection{
-		    display: flex;
-    		    flex-direction: column;
-    		    align-items: center;
-	}
-	.hp-s32{
-		width:1350px
-	}
-} 
-.hp-s34 img {
+  }
+  
+  @media all and (min-width: 1350px) {
+    #great-selection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hp-s32 {
+      width: 1350px;
+    }
+  }
+  .hp-s34 img {
     max-width: 100%;
     height: auto;
     max-height: 200px;
-}
-
-@media all and (min-width: 1920px) {
-	
-	.hp-s32{
-		width: 1300px;
-    		display: flex;
-    		flex-wrap: wrap;
-    		margin-top: -214px;
-    		padding: 280px 0;
-    		justify-content: center;
-	}
-	.hp-s33{
-		margin: auto 10px auto 10px;
-	}
-
-}
-.hp-s34 img {
+  }
+  
+  @media all and (min-width: 1920px) {
+    .hp-s32 {
+      width: 1300px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -214px;
+      padding: 280px 0;
+      justify-content: center;
+    }
+    .hp-s33 {
+      margin: auto 10px auto 10px;
+    }
+  }
+  .hp-s34 img {
     max-width: 100%;
     height: auto;
     max-height: 200px;
-}
-
-.hp-s35 h5{    
-	font-size: 16px;
-}
-.hp-s35 h4{
-	font-size: 12px;
-}
-
-
-.carousel {
-    width: 60%;
-    height: 400px;  /* Fixed height for the entire carousel */
+  }
+  
+  .hp-s35 h5 {
+    font-size: 16px;
+  }
+  .hp-s35 h4 {
+    font-size: 12px;
+  }
+  
+  .carousel {
+    width: auto;
+    height: 400px; /* Fixed height for the entire carousel */
     margin: auto;
-    padding: 32px;
+    padding: 52px;
     overflow: hidden;
-}
-
-.carousel-fade .carousel-item {
+  }
+  
+  .carousel-fade .carousel-item {
     opacity: 0;
     transition-duration: 1s;
     transition-property: opacity;
-}
-
-.carousel-fade .carousel-item.active {
+  }
+  
+  .carousel-fade .carousel-item.active {
     opacity: 1;
-}
-
-.carousel .carousel-item {
+  }
+  
+  .carousel .carousel-item {
     background-color: #f8f9fa;
     text-align: center;
-    height: 300px; /* Fixed height */
+    /* height: 400px; Fixed height */
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     object-fit: cover;
     /* padding: 0px; Remove or adjust this padding */
-}
-
-.zoom-effect {
-    transition: transform 0.5s ease;
+  }
+  
+  
+    
+  
+  .zoom-effect {
+    transition: all 0.5s ease;
     cursor: pointer;
-}
-
-.zoom-effect:hover {
+  }
+  
+  .zoom-effect:hover {
     transform: scale(1.1);
-}
-
-.carousel .carousel-item .d-flex {
+    border-radius: 12px;
+  }
+  
+  .carousel .carousel-item .d-flex {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     /* margin: 0 -50px; Remove this line */
-}
-
-.carousel .carousel-item .text-center {
+  }
+  
+  .carousel .carousel-item .text-center {
     flex: 1 0 25%;
     max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
     /* padding: 0 5px; Remove or adjust this padding */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
     background-image: none;
     width: 40px;
     height: 50px;
@@ -795,10 +817,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
+  }
+  
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
     content: "";
     display: inline-block;
     width: 20px;
@@ -806,71 +828,79 @@ footer{
     border-top: 3px solid black;
     border-right: 3px solid black;
     position: absolute;
-}
-
-.carousel-control-prev-icon::after {
+  }
+  
+  .carousel-control-prev-icon::after {
     transform: rotate(-135deg);
-}
-
-.carousel-control-next-icon::after {
+  }
+  
+  .carousel-control-next-icon::after {
     transform: rotate(45deg);
-} 
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
     background-color: rgba(0, 0, 0, 0.1);
-}
-
-.carousel .carousel-item img {
-    width: 200%;
-    height: auto;
-    max-height: 500px; 
+  }
+  
+  .carousel .carousel-item img {
+      width: 158px !important;
+      height: 301px !important;
+    max-height: 900px;
     object-fit: cover;
-    align-items: left;
+    align-items: center;
     text-align: center;
     vertical-align: middle;
-}
-
-.carousel .carousel-item h4,
-.carousel .carousel-item h5 {
+  }
+  
+  
+  
+  
+  
+  .carousel-container .carousel {
+  
+      width: 100%; /* Adjusts the width to take full container width */
+      max-height: 900px; /* Increase the height of the carousel */
+  }
+  
+  
+  
+  .carousel-container .carousel-item img {
+      width: 50%; /* Ensures images scale to the width of the carousel */
+      height: auto; /* Maintains the aspect ratio */
+      object-fit: cover; /* Ensures images cover the area without stretching */
+      max-height: 900px; /* Sets a maximum height for images */
+  }
+  
+  .carousel .carousel-item h4,
+  .carousel .carousel-item h5 {
     color: #343a40;
-}
+  }
   
   @media (max-width: 576px) {
     .carousel .carousel-item .text-center {
-        flex: 2 0 100%;
-        max-width: 100%;
-        padding: 10px; /* Adjust padding for mobile view */
+      flex: 2 0 100%;
+      max-width: 100%;
+      padding: 10px; /* Adjust padding for mobile view */
     }
-}
-
-/* Adjust the padding for images in larger views */
-@media (min-width: 992px) {
+  }
+  
+  /* Adjust the padding for images in larger views */
+  @media (min-width: 992px) {
     .carousel .carousel-item .text-center {
-        padding: 20px; /* Increase padding for desktop view */
+      padding: 20px 20px 40px 20px; /* Increase padding for desktop view */
     }
-}
-
-/* Adjust image size and carousel item padding globally */
-.carousel .carousel-item img {
+  }
+  
+  /* Adjust image size and carousel item padding globally */
+  .carousel .carousel-item img {
     width: 100%; /* Adjust width to 100% for better control */
     height: auto; /* Maintain aspect ratio */
     max-height: 200px; /* Adjust the maximum height */
     object-fit: contain; /* Ensure the image fits within the container */
-}
-
-/* Update carousel item properties */
-.carousel .carousel-item {
+  }
+  
+  /* Update carousel item properties */
+  .carousel .carousel-item {
     padding: 5px; /* Adjust overall item padding if needed */
-}
-
-
-
-
-
-
-
-
-
-
-
+  }
