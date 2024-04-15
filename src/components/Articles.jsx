@@ -30,17 +30,37 @@ import Lowers4 from "../assets/lower4.webp";
 import Lowers5 from "../assets/lower5.webp";
 import Lowers6 from "../assets/lower6.webp";
 
-const Articles = () => {
-    const [sortType, setSortType] = useState(null);
 
+
+  const Articles = () => {
+    // Define getItemsPerSlide function here to ensure it is hoisted
+    const getItemsPerSlide = () => {
+        if (window.innerWidth <= 768) {
+            return 1; // 1 item per slide on mobile screens
+        } else {
+            return 4; // 4 items per slide on desktop screens
+        }
+    };
+
+    const [sortType, setSortType] = useState(null);
     const [index, setIndex] = useState(0);
+    const [itemsPerSlide, setItemsPerSlide] = useState(getItemsPerSlide());
+
+    useEffect(() => {
+        const handleResize = () => {
+            setItemsPerSlide(getItemsPerSlide());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
 
     const handleCategoryClick = (type) => {
-        console.log(`Filtering for type: ${type}`); // Debugging statement
+        console.log(`Filtering for type: ${type}`);
         setSortType(type);
     };
 
@@ -48,77 +68,88 @@ const Articles = () => {
      
         
 
-        { id: 1, type: 'Polos', image: polo1, priceRange: '$69.00 - $99.00', name: ' Jack & Grey Polo' },
-        { id: 2, type: 'Polos', image: polo2, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Polo' },
-        { id: 3, type: 'Polos', image: polo3, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Green Polo' },
+        { id: 1, type: 'Polos', image: polo1, priceRange: '$69.00 - $99.00', name: ' Jack & G Polo' },
+        { id: 2, type: 'Polos', image: polo2, priceRange: '$69.00 - $99.00', name: ' Jack & J Polo' },
+        { id: 3, type: 'Polos', image: polo3, priceRange: '$69.00 - $99.00', name: ' Jack & J Polo' },
         { id: 4, type: 'Polos', image: polo4, priceRange: '$69.00 - $99.00', name: 'Snitch Red Polo' },
         { id: 5, type: 'Polos', image: polo5, priceRange: '$69.00 - $99.00', name: ' Gas Grey Polo' },
         { id: 6, type: 'Polos', image: polo6, priceRange: '$69.00 - $99.00', name: ' J&C Green Polo' },
 
 
 
-        { id: 7, type: 'T-Shirt', image: shirtImage, priceRange: '$69.00 - $99.00', name: ' Gap Pinkiee T-Shirt' },
-        { id: 8, type: 'T-Shirt', image: tshirt3, priceRange: '$69.00 - $99.00', name: ' Armani White T-Shirt' },
-        { id: 9, type: 'T-Shirt', image: tshirt4, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Red T-Shirt' },
-        { id: 10, type: 'T-Shirt', image: tshirt5, priceRange: '$69.00 - $99.00', name: ' Jack & Jones Dark Blue T-Shirt' },
-        { id: 11, type: 'T-Shirt', image: tshirt6, priceRange: '$69.00 - $99.00', name: 'Italy Whitezz T-Shirt' },
-        { id: 12, type: 'T-Shirt', image: tshirt7, priceRange: '$69.00 - $99.00', name: 'Black Armani Premium T-Shirt' },
+        { id: 7, type: 'T-Shirt', image: shirtImage, priceRange: '$69.00 - $99.00', name: ' Gap  T-Shirt' },
+        { id: 8, type: 'T-Shirt', image: tshirt3, priceRange: '$69.00 - $99.00', name: ' Armani  T-Shirt' },
+        { id: 9, type: 'T-Shirt', image: tshirt4, priceRange: '$69.00 - $99.00', name: ' Jack & J T-Shirt' },
+        { id: 10, type: 'T-Shirt', image: tshirt5, priceRange: '$69.00 - $99.00', name: ' Jack & J TShirt' },
+        { id: 11, type: 'T-Shirt', image: tshirt6, priceRange: '$69.00 - $99.00', name: ' Whitezz T-Shirt' },
+        { id: 12, type: 'T-Shirt', image: tshirt7, priceRange: '$69.00 - $99.00', name: 'Armani  T-Shirt' },
         { id: 13, type: 'T-Shirt', image: tshirt8, priceRange: '$69.00 - $99.00', name: ' Goodz T-Shirt' },
         { id: 14, type: 'T-Shirt', image: tshirt9, priceRange: '$69.00 - $99.00', name: 'Wrongn T-Shirt' },
 
 
 
-        { id: 15, type: 'Shorts', image: shorts1, priceRange: '$69.00 - $99.00', name: 'Patagonia Baggies Short' },
-        { id: 16, type: 'Shorts', image: shorts2, priceRange: '$69.00 - $99.00', name: ' Amazon Essentials Short' },
+        { id: 15, type: 'Shorts', image: shorts1, priceRange: '$69.00 - $99.00', name: 'Patagonia Short' },
+        { id: 16, type: 'Shorts', image: shorts2, priceRange: '$69.00 - $99.00', name: ' Amazon  Short' },
         { id: 17, type: 'Shorts', image: shorts3, priceRange: '$69.00 - $99.00', name: '  Nike Short' },
-        { id: 18, type: 'Shorts', image: shorts4, priceRange: '$69.00 - $99.00', name: '  Van Heusen Short' },
+        { id: 18, type: 'Shorts', image: shorts4, priceRange: '$69.00 - $99.00', name: '  Heusen Short' },
         { id: 19, type: 'Shorts', image: shorts5, priceRange: '$69.00 - $99.00', name: ' Lacoste Short ' },
-        { id: 20, type: 'Shorts', image: shorts6, priceRange: '$69.00 - $99.00', name: '  United Colors of Benetton Short' },
+        { id: 20, type: 'Shorts', image: shorts6, priceRange: '$69.00 - $99.00', name: '  UCB Short' },
         
 
 
 
-        { id: 21, type: 'Lowers', image: Lowers1, priceRange: '$69.00 - $99.00', name: 'Allen Solly Lower ' },
+        { id: 21, type: 'Lowers', image: Lowers1, priceRange: '$69.00 - $99.00', name: ' Solly Lower ' },
         { id: 22, type: 'Lowers', image: Lowers2, priceRange: '$69.00 - $99.00', name: 'GAP Lower' },
         { id: 23, type: 'Lowers', image: Lowers3, priceRange: '$69.00 - $99.00', name: 'Roadster Lower ' },
-        { id: 24, type: 'Lowers', image: Lowers4, priceRange: '$69.00 - $99.00', name: 'U.S. Polo Assn jogger' },
-        { id: 25, type: 'Lowers', image: Lowers5, priceRange: '$69.00 - $99.00', name: 'Superdry Jogger' },
-        { id: 26, type: 'Lowers', image: Lowers6, priceRange: '$69.00 - $99.00', name: 'Levi TrackPant ' },
+        { id: 24, type: 'Lowers', image: Lowers4, priceRange: '$69.00 - $99.00', name: 'U.S. Polo jogger' },
+        { id: 25, type: 'Lowers', image: Lowers5, priceRange: '$69.00 - $99.00', name: 'UCB Jogger' },
+        { id: 26, type: 'Lowers', image: Lowers6, priceRange: '$69.00 - $99.00', name: 'Levi Track ' },
+        { id: 27, type: 'Lowers', image: Lowers5, priceRange: '$69.00 - $99.00', name: 'UCB Jogger' },
+        { id: 28, type: 'Lowers', image: Lowers6, priceRange: '$69.00 - $99.00', name: 'Levi TrackPant ' },
 
+
+
+        { id: 29, type: 'Shorts', image: shorts5, priceRange: '$69.00 - $99.00', name: ' Lacoste Short ' },
+        { id: 30, type: 'Shorts', image: shorts6, priceRange: '$69.00 - $99.00', name: '  UCB Short' },
+
+        { id: 31, type: 'Polos', image: polo5, priceRange: '$69.00 - $99.00', name: ' Gas Grey Polo' },
+        { id: 32, type: 'Polos', image: polo6, priceRange: '$69.00 - $99.00', name: ' J&C Green Polo' },
 
 
     ];
     const filteredProducts = sortType ? products.filter(product => product.type === sortType) : products;
-    const itemsPerSlide = 4;
-const carouselItems = [];
 
-for (let i = 0; i < filteredProducts.length; i += itemsPerSlide) {
-  const items = filteredProducts.slice(i, i + itemsPerSlide);
-  carouselItems.push(
-    <Carousel.Item key={i}>
-      <div className="d-flex justify-content-around">
-        {items.map(product => (
-          <div key={product.id} className="text-center" style={{ flex: "1 0 25%" }}>
-            <img src={product.image} alt={product.name} className="zoom-effect" style={{ width: "90%", height: "auto" }} />
-            <div className="hp-s35">
-              <h5>{product.name}</h5>
-              {product.price ? (
-                <h4>{product.price}</h4>
-              ) : (
-                <h4>
-                  {product.oldPrice && <s>{product.oldPrice}</s>} {product.priceRange}
-                </h4>
-              )}
-              {product.discount && <div className="hp-s341">{product.discount}</div>}
+    const carouselItems = filteredProducts.reduce((acc, item, index) => {
+        const chunkIndex = Math.floor(index / itemsPerSlide);
+        if (!acc[chunkIndex]) {
+            acc[chunkIndex] = [];
+        }
+        acc[chunkIndex].push(item);
+        return acc;
+    }, []).map((group, index) => (
+        <Carousel.Item key={index}>
+            <div className="d-flex justify-content-around">
+                {group.map(product => (
+                    <div key={product.id} className="text-center" style={{ flex: `1 0 ${100 / itemsPerSlide}%` }}>
+                        <img src={product.image} alt={product.name} className="zoom-effect" style={{ width: "90%", height: "auto" }} />
+                        <div className="hp-s35">
+                            <h5>{product.name} </h5>
+                            <h5>{product.priceRange}</h5>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </Carousel.Item>
-  );
-}
+        </Carousel.Item>
+    ));
 
 
+
+
+
+
+
+
+    
     const sortedProducts = sortType ? products.filter(product => product.type === sortType) : products;
 
     return (
@@ -155,42 +186,21 @@ for (let i = 0; i < filteredProducts.length; i += itemsPerSlide) {
                 </div>
             </section>
 
-            {/* <section id="great-selection">
+           
+
+
+            <section id="great-selection">
                 <div className="hp-s31">
                     <h1>Great Selection</h1>
                     <p>Follow the most popular trends and get the best out of the spring collection</p>
                 </div>
-                <div className="hp-s32">
-                    {sortedProducts.map(product => (
-                        <div key={product.id} className="hp-s33">
-                            <div className="hp-s34">
-                                <img src={product.image} alt={product.name} />
-                                {product.discount && <div className="hp-s341">{product.discount}</div>}
-                            </div>
-                            <div className="hp-s35">
-                                <h5>{product.name}</h5>
-                                {product.price ? (
-                                    <h4>{product.price}</h4>
-                                ) : (
-                                    <h4>{product.oldPrice && <s>{product.oldPrice}</s>} {product.priceRange}</h4>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+
+                <div className="carousel-container">
+                <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
+                    {carouselItems}
+                </Carousel>
                 </div>
-            </section> */}
-
-
-
-            <section id="great-selection">
-  <div className="hp-s31">
-    <h1>Great Selection</h1>
-    <p>Follow the most popular trends and get the best out of the spring collection</p>
-  </div>
-  <Carousel className="carousel-fade" activeIndex={index} onSelect={handleSelect} interval={3000}>
-    {carouselItems}
-  </Carousel>
-</section>
+            </section>
         </>
     );
 };
