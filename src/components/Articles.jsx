@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 import polo1 from "../assets/polo1.webp";
 import polo2 from "../assets/polo2.webp";
 import polo3 from "../assets/polo3.webp";
@@ -29,7 +30,6 @@ import Lowers3 from "../assets/lower3.webp";
 import Lowers4 from "../assets/lower4.webp";
 import Lowers5 from "../assets/lower5.webp";
 import Lowers6 from "../assets/lower6.webp";
-
 
 
   const Articles = () => {
