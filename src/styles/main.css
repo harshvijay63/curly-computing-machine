@@ -589,7 +589,7 @@ html {
       position: relative; /* Keep sections in the natural flow */
       width: 100%; /* Full width to prevent overflow */
       z-index: auto; /* Reset z-index to natural stacking */
-      padding: 180px 10px;/* Add some padding for better spacing */
+      padding: 40px 10px;/* Add some padding for better spacing */
   }
   
     .hp-s2 {
