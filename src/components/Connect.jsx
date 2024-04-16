@@ -23,7 +23,8 @@ const Connect = () => {
             <div className="hp-s51">
               <i class="fa-brands fa-instagram"></i>
               <a href="/">@kunal_Enterprise</a>
-              <p>FOLLOW US ON INSTAGRAM</p>
+                div className="follow">
+              <p>FOLLOW US ON INSTAGRAM</p> </div>
             </div>
             <div className="hp-s52">
               <div className="hp-s53">
