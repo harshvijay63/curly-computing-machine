@@ -656,6 +656,12 @@ html {
       margin: auto;
     }
 
+
+    .email{
+        text-align: center;
+        margin-left: 15px;
+    }
+
     .follow{
         text-align: center;
         margin-top: -7px;
