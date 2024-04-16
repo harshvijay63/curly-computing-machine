@@ -13,7 +13,8 @@ const footer = () => {
       </div>
       <div className="f2">
         <div className="f21">
-          <input type="text" placeholder='Enter your e-mail...' />
+          <div className="email">
+          <input type="text" placeholder='Enter your e-mail' /> </div>
           <a href="/">SUBSCRIBE US <i class="fa-solid fa-square-arrow-up-right"></i></a>
         </div>
         <hr />
